@@ -1,0 +1,327 @@
+@charset "UTF-8";
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: arial, "Microsoft JhengHei", "微軟正黑體", sans-serif !important;
+}
+
+/*header*/
+.header {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2%;
+  position: sticky;
+  /*固定header選單*/
+  top: 0;
+  z-index: 2;
+}
+.header h1 a {
+  display: block;
+  background-image: url(https://i.postimg.cc/prJyxcxk/logobyyccy.jpg);
+  width: 150px;
+  height: 30px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.header .menu {
+  display: flex;
+}
+.header .menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+.header .menu :hover {
+  background: #3d1101;
+}
+.header label,
+.header input {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header label {
+    display: block;
+    cursor: pointer;
+  }
+  .header label img {
+    width: 40px;
+  }
+  .header .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+    position: absolute;
+    z-index: 100;
+    top: 41px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+  }
+  .header .menu li {
+    background: #000;
+    text-align: center;
+  }
+  .header input:checked ~ .menu {
+    max-height: 200px;
+  }
+}
+
+/*banner*/
+.banner {
+  background-image: url(https://i.postimg.cc/zGmWjKMz/header-desktop.png);
+  max-width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-text {
+  background: rgba(0, 0, 0, 0.4);
+  width: 70%;
+  padding: 40px;
+  color: white;
+}
+.banner .banner-text .bite {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .banner .banner-text .bite {
+    font-size: px;
+  }
+}
+@media (max-width: 375px) {
+  .banner .banner-text span {
+    display: block;
+  }
+  .banner .banner-text .bite {
+    font-size: 30px;
+  }
+}
+.banner .banner-text li {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/*login*/
+.login {
+  background: #efe9e7;
+  color: #642100;
+  padding: 50px;
+  text-align: center;
+  font-weight: bolder;
+}
+.login h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.login p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.login .loginbox {
+  border-top: 5px solid #f56c23;
+  box-shadow: 5px 5px 10px gray;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+  text-align: left;
+  font-size: 20px;
+  position: relative;
+  /*更改icon位置*/
+}
+.login .loginbox h3 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.login .loginbox input {
+  width: 95%;
+  font-size: 30px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+  text-indent: 35px;
+}
+.login .loginbox a {
+  text-decoration: none;
+  color: #f56c23;
+  display: block;
+  margin-bottom: 20px;
+}
+.login .loginbox .btnbox {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+}
+.login .loginbox .btnbox .btn {
+  width: 45%;
+  color: white;
+  font-size: 20px;
+  padding: 10px 8% 10px 0;
+  border: none;
+  cursor: pointer;
+}
+.login .loginbox .btnbox .btn1 {
+  background: #9b9796;
+}
+.login .loginbox .btnbox .btn2 {
+  background: #f56c23;
+}
+.login .loginbox i {
+  position: absolute;
+  left: 30px;
+}
+.login .loginbox .mail {
+  top: calc(32% - 0.5em);
+}
+.login .loginbox .lock {
+  top: calc(59% - 0.5em);
+}
+
+@media (max-width: 767px) {
+  .login h2 {
+    font-size: 3em;
+  }
+  .login .loginbox {
+    width: 75%;
+  }
+}
+@media (max-width: 343px) {
+  .login h2 {
+    font-size: 2em;
+  }
+  .login .loginbox {
+    width: 95%;
+  }
+  .login .loginbox .mail {
+    top: calc(27% - 0.5em);
+  }
+  .login .loginbox .lock {
+    top: calc(50% - 0.5em);
+  }
+
+  .btnbox {
+    flex-direction: column;
+  }
+  .btnbox .btn {
+    padding-right: 50%;
+  }
+}
+/*footer*/
+.footer {
+  background: #efe9e7;
+  color: #642100;
+  padding: 60px 30px 200px;
+  position: relative;
+}
+.footer span {
+  display: block;
+  width: 30%;
+  float: left;
+  margin: 0 20px;
+}
+.footer h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.footer li {
+  list-style: disc inside;
+}
+.footer .clearfix {
+  clear: both;
+}
+@media (max-width: 767px) {
+  .footer span {
+    width: 50%;
+    margin: 0;
+  }
+}
+@media (max-width: 375px) {
+  .footer span {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.footer img {
+  display: block;
+  position: absolute;
+}
+.footer .g {
+  width: 75px;
+  height: 50px;
+  bottom: 17.5%;
+  right: 16%;
+}
+.footer .twitter {
+  width: 70px;
+  height: 80px;
+  bottom: 13%;
+  right: 9.5%;
+}
+.footer .facebook {
+  width: 60px;
+  height: 70px;
+  bottom: 14.5%;
+  right: 4%;
+}
+.footer .logo {
+  top: 25%;
+  right: 5%;
+}
+@media (max-width: 767px) {
+  .footer .facebook {
+    right: 1%;
+  }
+  .footer .twitter {
+    right: 8%;
+  }
+  .footer .g {
+    right: 15%;
+  }
+  .footer .logo {
+    top: 50%;
+    width: 30%;
+    right: 2%;
+  }
+}
+@media (max-width: 375px) {
+  .footer .facebook {
+    top: 82.5%;
+    right: 0;
+  }
+  .footer .twitter {
+    top: 81.5%;
+    right: 15%;
+  }
+  .footer .g {
+    top: 84.5%;
+    right: 30%;
+  }
+  .footer .logo {
+    width: 60%;
+    top: 70%;
+  }
+}
+
+/*回到頂部*/
+.top {
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  opacity: 0.8;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .top {
+    right: 1%;
+  }
+}
